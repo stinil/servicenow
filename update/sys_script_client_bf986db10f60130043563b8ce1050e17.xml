@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>log details  onto the Javascript log by using jslog()</description>
+        <field>active</field>
+        <global>true</global>
+        <messages>ufuyfv</messages>
+        <name>NeedIt JS &amp; Console log example</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+	 jslog(" ME:this messge is from jslog ");
+    jslog('the user name from jslog is '+ g_user.userID);
+ 	jslog('the state of this form is'+ g_form.getValue('state'));
+	
+	//
+	console.log("This is from Console.log method");
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-28 13:06:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bf986db10f60130043563b8ce1050e17</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>NeedIt JS &amp; Console log example</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_159938_needit">91a11c170f58130043563b8ce1050e3a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">91a11c170f58130043563b8ce1050e3a</sys_scope>
+        <sys_update_name>sys_script_client_bf986db10f60130043563b8ce1050e17</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-03-05 11:34:09</sys_updated_on>
+        <table>x_159938_needit_needit</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

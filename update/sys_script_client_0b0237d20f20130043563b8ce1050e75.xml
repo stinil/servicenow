@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>asdf</description>
+        <field>active</field>
+        <global>true</global>
+        <messages>asdf</messages>
+        <name>NeedIt Debugging Example</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+	try{
+		var x = 7;
+		//jslogger("ME:This message is from jslog().");
+		jslog("ME:The value of x = " + x);
+		jslog("ME:The NeedIt State value = " + g_form.getValue('state'));
+		jslog("ME:The currently logged in user is " + g_user.getFullName() + ".");
+
+ 		g_form.setValue('short_description',g_form.getValue('description'));
+	}
+	catch(err){
+		jslog('ME:A JavaScript runtime error occurred: ' + err.message);
+   }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-03-02 12:34:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0b0237d20f20130043563b8ce1050e75</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>NeedIt Debugging Example</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_159938_needit">91a11c170f58130043563b8ce1050e3a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">91a11c170f58130043563b8ce1050e3a</sys_scope>
+        <sys_update_name>sys_script_client_0b0237d20f20130043563b8ce1050e75</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-03-05 12:36:48</sys_updated_on>
+        <table>x_159938_needit_needit</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

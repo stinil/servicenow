@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_theme">
+    <sys_ui_theme action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <css>try{&#13;
+   //Set the background CSS of the navigation header&#13;
+   window.parent.$$('td.bannerRight','td.bannerLeft','td.bannerCenter','td.navpageTools').invoke('setStyle',{backgroundImage: 'url(/blueGreenGradient.jpgx)'});&#13;
+   //Set the background CSS of the navigation header stripe directly below the logo&#13;
+   window.parent.$$('tr.nav_header_stripe').invoke('setStyle',{backgroundImage: 'url(/yellowGradient-small.jpgx)'});&#13;
+   //Set the background CSS of the navigation header stripe 'Logout' button&#13;
+   window.parent.$$('button.nav_header_button').invoke('setStyle',{backgroundImage: 'url(/rustGradient-small.jpgx)'});&#13;
+&#13;
+   //OPTIONAL:  Set html text in the banner for font styling, marquee, etc.&#13;
+   window.parent.$('nav_header_text').innerHTML = '&lt;marquee&gt;&lt;strong&gt;My custom scrolling banner&lt;/strong&gt;&lt;/marquee&gt;';&#13;
+}catch(e){}</css>
+        <device>browser</device>
+        <name>Stinil</name>
+        <sys_class_name>sys_ui_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-22 14:52:23</sys_created_on>
+        <sys_id>04184f730f10130043563b8ce1050ef4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Stinil</sys_name>
+        <sys_package display_value="NeedIt" source="x_159938_needit">91a11c170f58130043563b8ce1050e3a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">91a11c170f58130043563b8ce1050e3a</sys_scope>
+        <sys_update_name>sys_ui_theme_04184f730f10130043563b8ce1050ef4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-22 14:52:23</sys_updated_on>
+    </sys_ui_theme>
+</record_update>
