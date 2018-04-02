@@ -6,7 +6,7 @@
         <action_delete>false</action_delete>
         <action_insert>true</action_insert>
         <action_query>false</action_query>
-        <action_update>false</action_update>
+        <action_update>true</action_update>
         <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
@@ -19,7 +19,7 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name> NeedIt When needed field date</name>
+        <name>Validate Requested for email</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -30,41 +30,32 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	var niUtils = new NeedItUtils();
-	var isPast = niUtils.isPastDate(current.u_when_needed);
-	if(isPast== true) 
-			{
-			gs.addErrorMessage("When needed Date cannot be a prior date than Today. Your action has not been saved to the database");
-			current.setAbortAction(true);
-		}
-// 	var currentDayDate  = currentDay.getLocalDate();
-// 	var WhenNeedeDate  = WhenNeedeDate.getLocalDate();
-	if(WhenNeeded.compareTo(currentDay)==0)
-		{
-			gs.addErrorMessage("Error Message - When Needed date cannot be the same date");
-			gs.error("Error - When needed Date cannot be the same Date");
-			gs.debug("Debug - when needed cant be the same Date");
-			current.setAbortAction(true);
-		}
+		var isEmail = validateEmailAddress(current.u_requested_for_email);
+	if(isEmail == false)
+	{
+		gs.addErrorMessage("The Email provided in the requested for email field is not a valid email address");
+		current.setAbortAction(true);
+	}
 	
+
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-03-26 15:17:21</sys_created_on>
+        <sys_created_on>2018-03-27 14:55:32</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>8b70485e0f01130043563b8ce1050e46</sys_id>
-        <sys_mod_count>10</sys_mod_count>
-        <sys_name> NeedIt When needed field date</sys_name>
+        <sys_id>45c301e20f05130043563b8ce1050eda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate Requested for email</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_159938_needit">91a11c170f58130043563b8ce1050e3a</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">91a11c170f58130043563b8ce1050e3a</sys_scope>
-        <sys_update_name>sys_script_8b70485e0f01130043563b8ce1050e46</sys_update_name>
+        <sys_update_name>sys_script_45c301e20f05130043563b8ce1050eda</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-04-02 12:27:12</sys_updated_on>
+        <sys_updated_on>2018-03-27 14:55:32</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=8b70485e0f01130043563b8ce1050e46"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=45c301e20f05130043563b8ce1050eda"/>
 </record_update>
