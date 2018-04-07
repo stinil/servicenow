@@ -8,6 +8,7 @@
         <element attributes="edge_encryption_enabled=true" label="Requested for email" mandatory="true" max_length="40" name="u_requested_for_email" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
             <choice>
+                <element label="Human Resources" sequence="0" value="Human Resources"/>
                 <element label="Legal" sequence="0" value="legal"/>
                 <element label="Human Resource" sequence="1" value="hr"/>
                 <element label="Facilities" sequence="2" value="facilities"/>
@@ -16,6 +17,7 @@
         </element>
         <element attributes="edge_encryption_enabled=true" choice="1" default="legal1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
             <choice>
+                <element label="Human Resources 2" sequence="0" value="Human Resources 2"/>
                 <element label="Legal 1" sequence="0" value="legal1"/>
                 <element label="Legal 2" sequence="1" value="legal2"/>
                 <element label="Human Resource 1" sequence="2" value="hr1"/>
