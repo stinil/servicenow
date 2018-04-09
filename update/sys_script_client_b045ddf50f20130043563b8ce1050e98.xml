@@ -12,9 +12,13 @@
         <order/>
         <script><![CDATA[function onLoad() {
    //if the form loading is a new record set the Requested for field to logged in UserID
-   if(g_form.isNewRecord()){
-	  g_form.setValue('u_requested_for', g_user.userID);
-	  }
+	alert("If statement Started");
+	var requestor = g_form.u_requested_for;
+		if(requestor == undefined || requestor == ''  ){
+ 	  g_form.setValue('u_requested_for', g_user.userID);
+ 	  }
+	alert("if statement finished");
+	
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -22,7 +26,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b045ddf50f20130043563b8ce1050e98</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>NeedIt Set Requested for</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_159938_needit">91a11c170f58130043563b8ce1050e3a</sys_package>
@@ -30,7 +34,7 @@
         <sys_scope display_value="NeedIt">91a11c170f58130043563b8ce1050e3a</sys_scope>
         <sys_update_name>sys_script_client_b045ddf50f20130043563b8ce1050e98</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-03-05 15:38:00</sys_updated_on>
+        <sys_updated_on>2018-04-09 14:45:39</sys_updated_on>
         <table>x_159938_needit_needit</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>
