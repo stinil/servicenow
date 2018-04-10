@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_159938_needit_needit" sizeclass="40" type="collection">
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_159938_needit_needit" sizeclass="63" type="collection">
         <element label="My field" max_length="40" name="my_field" type="string"/>
         <element display="true" label="My field2" max_length="40" name="u_my_field2" type="glide_date_time"/>
         <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
